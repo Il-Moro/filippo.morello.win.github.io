@@ -1,12 +1,12 @@
 @font-face {
     font-family: 'Attendant';
-    src: url('Attendant0.3-Medium.woff2') format('woff2');
+    src: url('../sources/Attendant0.3-Medium.woff2') format('woff2');
     font-weight: 500;
     font-style: normal;
 }
 @font-face {
     font-family: 'Field Grot';
-    src: url('Field_Grot_Wide_0624_Trial-Regular.woff') format('woff');
+    src: url('../sources/Field_Grot_Wide_0624_Trial-Regular.woff') format('woff');
     font-weight: 400;
     font-style: normal;
 }
