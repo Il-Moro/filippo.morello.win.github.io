@@ -32,6 +32,7 @@ html, body {
 a {
     color: inherit;
     text-decoration: none;
+    transition: color 0.3s ease;
 }
 a:hover {
     color: #fff;
@@ -60,7 +61,7 @@ a:hover {
     flex: 2;
     border-right: 0;
     padding: 0;
-    background: linear-gradient(rgb(50,50,50), rgb(50,50,50)) no-repeat center / 1px 100%;
+    background: linear-gradient(to bottom, rgba(100,100,100,0.1), rgba(200,200,200,0.6), rgba(100,100,100,0.1)) no-repeat center / 1px 100%;
     padding-bottom: 10em;
 }
 
@@ -70,9 +71,11 @@ nav {
     font-size: 1.2rem;
 }
 nav .home {
-    font-weight: 600;
+    font-size: 2rem;
+    font-weight: 700;
     display: block;
     margin-bottom: 0.5em;
+    letter-spacing: -0.03em;
 }
 nav .nav-links a {
     text-decoration: underline;
@@ -92,12 +95,25 @@ nav .nav-links a {
     text-indent: 0;
 }
 .verso-index p.contact {
+    position: fixed;
+    bottom: 2em;
+    right: 2.5em;
+    z-index: 100;
     text-indent: 0;
-    margin-top: 3em;
-    color: rgb(150,150,150);
+    margin: 0;
+    color: rgb(150, 150, 150);
     font-size: 0.9rem;
+    background: transparent;
+    padding: 0;
+    display: flex;
+    gap: 0.8em;
 }
-.contact a {
+.verso-index p.contact a {
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+.verso-index p.contact a:hover {
+    color: #fff;
     text-decoration: underline;
 }
 
@@ -115,10 +131,12 @@ nav .nav-links a {
 .item {
     border-top: 1px solid rgb(50,50,50);
     padding: 0.8rem 0;
+    transition: color 0.3s ease, padding-left 0.3s ease;
 }
 .item:hover {
     color: #fff;
     cursor: pointer;
+    padding-left: 0.5rem;
 }
 .item-details {
     display: flex;
@@ -174,7 +192,7 @@ nav .nav-links a {
 
 .giant-word {
     font-family: 'Field Grot', sans-serif;
-    font-size: 5vw;
+    font-size: 3.5vw;
     line-height: 0.95;
     font-weight: 400;
     color: rgb(220, 220, 220);
@@ -189,10 +207,11 @@ nav .nav-links a {
 }
 
 .recto h1 {
-    font-size: 3rem;
-    font-weight: 500;
-    margin-bottom: 0.5em;
+    font-size: 4rem;
+    font-weight: 700;
+    margin-bottom: 0.2em;
     margin-left: 0;
+    letter-spacing: -0.03em;
 }
 .description {
     font-size: 1.05rem;
@@ -236,8 +255,18 @@ nav .nav-links a {
     .recto h1, .description {
         margin-left: 0;
     }
+    .description {
+        width: 100%; /* Fix width on mobile */
+    }
     .synopsis {
         min-height: auto;
         padding: 2em 1em;
+    }
+    .verso-index p.contact {
+        position: relative;
+        bottom: auto;
+        left: auto;
+        margin-top: 3em;
+        padding: 0;
     }
 }
