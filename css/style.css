@@ -77,10 +77,31 @@ nav .home {
     margin-bottom: 0.5em;
     letter-spacing: -0.03em;
 }
+nav .nav-links {
+    position: fixed;
+    top: 2em;
+    right: 3em;
+    display: flex;
+    flex-direction: row;
+    gap: 3em;
+    z-index: 1000;
+}
 nav .nav-links a {
-    text-decoration: underline;
-    text-decoration-thickness: 1px;
-    text-underline-offset: 2px;
+    font-size: 2rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    text-decoration: none;
+    letter-spacing: -0.02em;
+    transition: all 0.3s ease;
+    color: rgb(200, 200, 200);
+    border: none;
+    padding: 0;
+}
+nav .nav-links a:hover {
+    color: #fff;
+    text-decoration: none;
+    background: transparent;
+    transform: translateY(-2px);
 }
 
 /* Testo Verso */
@@ -214,7 +235,7 @@ nav .nav-links a {
     letter-spacing: -0.03em;
 }
 .description {
-    font-size: 1.05rem;
+    font-size: 1rem;
     width: 48%; /* Keep strictly left of center */
     margin-left: 0;
     line-height: 1.5;
@@ -265,8 +286,211 @@ nav .nav-links a {
     .verso-index p.contact {
         position: relative;
         bottom: auto;
-        left: auto;
+        right: auto;
         margin-top: 3em;
         padding: 0;
+        justify-content: center;
+        width: 100%;
+    }
+    .giant-index-block h1.giant-word {
+        font-size: 8vw !important;
+    }
+}
+
+/* Hamburger Menu */
+.hamburger-nav {
+    position: fixed;
+    top: 2em;
+    right: 3em;
+    z-index: 1000;
+}
+.hamburger-icon {
+    width: 30px;
+    height: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    cursor: pointer;
+    padding: 10px; /* larger clickable area */
+    margin: -10px;
+}
+.hamburger-icon span {
+    display: block;
+    height: 2px;
+    background-color: rgb(200, 200, 200);
+    transition: all 0.3s ease;
+}
+.hamburger-menu {
+    position: absolute;
+    top: 100%;
+    right: 0;
+    margin-top: 1em;
+    background: transparent;
+    border: none;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    gap: 0.5em;
+    padding: 0;
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(-10px);
+    transition: all 0.3s ease;
+}
+.hamburger-nav:hover .hamburger-menu {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+}
+.hamburger-menu a {
+    font-size: 1.2rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    color: rgb(200, 200, 200);
+    text-decoration: none;
+    white-space: nowrap;
+    transition: color 0.3s;
+}
+.hamburger-menu a:hover {
+    color: #fff;
+}
+
+/* Marquee Fade */
+.marquee-fade-container {
+    -webkit-mask-image: linear-gradient(to right, transparent, black 15%, black 85%, transparent);
+    mask-image: linear-gradient(to right, transparent, black 15%, black 85%, transparent);
+    width: 90%;
+    margin: 0 auto;
+}
+
+/* Timeline Path Page */
+.timeline-container {
+    position: relative;
+    width: 100%;
+    margin: 4em auto;
+    padding: 2em 0;
+    min-height: 80vh;
+}
+.timeline-line {
+    position: absolute;
+    left: 50%;
+    top: 0;
+    bottom: 0;
+    width: 2px;
+    background: rgb(40,40,40);
+    transform: translateX(-50%);
+}
+.timeline-progress {
+    position: absolute;
+    left: 50%;
+    top: 0;
+    width: 2px;
+    background: #fff;
+    transform: translateX(-50%);
+    height: 0%;
+    transition: height 0.2s ease-out;
+}
+.timeline-progress::after {
+    content: '▼';
+    position: absolute;
+    bottom: -10px;
+    left: 50%;
+    transform: translateX(-50%);
+    color: #fff;
+    font-size: 1.2rem;
+}
+.timeline-node {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin: 8em 0;
+    position: relative;
+    opacity: 0.2;
+    transition: opacity 0.6s ease;
+}
+.timeline-node.active {
+    opacity: 1;
+}
+.timeline-left, .timeline-right {
+    width: 45%;
+}
+.timeline-left {
+    text-align: right;
+    padding-right: 1.5em;
+    box-sizing: border-box;
+}
+.timeline-right {
+    text-align: left;
+    padding-left: 1.5em;
+    padding-right: 2em;
+    box-sizing: border-box;
+}
+.timeline-dot {
+    position: absolute;
+    left: 50%;
+    top: 0;
+    transform: translateX(-50%);
+    width: 14px;
+    height: 14px;
+    background: rgb(40,40,40);
+    border-radius: 50%;
+    transition: background 0.6s ease, box-shadow 0.6s ease;
+}
+.timeline-node.active .timeline-dot {
+    background: #fff;
+    box-shadow: 0 0 10px #fff;
+}
+.timeline-title {
+    font-size: 1.8rem;
+    font-weight: 700;
+    margin: 0 0 0.5em 0;
+    line-height: 1.2;
+    color: #fff;
+}
+.timeline-subtitle {
+    font-size: 1.15rem;
+    font-weight: 400;
+    color: rgb(150,150,150);
+    margin: 0.5em 0;
+    line-height: 1.4;
+}
+.timeline-date {
+    font-size: 1.2rem;
+    color: rgb(150, 150, 150);
+    margin-top: 0.5em;
+    font-style: italic;
+}
+.timeline-description {
+    font-size: 1.15rem;
+    color: rgb(150, 150, 150);
+    line-height: 1.5;
+    margin: 0 0 0.5em 0;
+}
+.timeline-description strong {
+    color: #fff;
+}
+
+@media (max-width: 768px) {
+    .timeline-node {
+        flex-direction: column;
+        align-items: flex-start;
+        margin: 4em 0;
+    }
+    .timeline-line, .timeline-progress, .timeline-dot {
+        left: 0;
+        transform: none;
+    }
+    .timeline-progress::after {
+        left: 0;
+        transform: translateX(-40%);
+    }
+    .timeline-left, .timeline-right {
+        width: 100%;
+        padding-left: 2em;
+        padding-right: 2em;
+        text-align: left;
+    }
+    .timeline-left {
+        margin-bottom: 1em;
     }
 }

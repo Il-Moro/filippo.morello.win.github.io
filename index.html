@@ -1,9 +1,9 @@
 <!DOCTYPE html>
-<html lang="it">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Filippo Morello</title>
+    <title>Filippo Morello - Home</title>
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
@@ -12,19 +12,23 @@
             
             <!-- Left Pane (Verso) -->
             <div class="verso">
-                <nav>
-                    <span class="home"><a href="index.html">Filippo Morello</a></span>
-                    <span class="nav-links">
-                        <a href="index.html">Home</a>, 
-                        <a href="html/skills.html">Skills</a>.
-                    </span>
+                <nav class="hamburger-nav">
+                    <div class="hamburger-icon">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </div>
+                                        <div class="hamburger-menu">
+                        <a href="index.html">Home</a>
+                        <a href="html/projects.html">Projects</a>
+                    </div>
                 </nav>
                 
                 <div class="verso-index" id="about">
-                    <p class="no-indent"><strong>Data Scientist | Software Developer</strong></p>
-                    <p>I am Filippo Morello, a Data Science student (Foundations of Artificial Intelligence and Machine Learning) at the University of Trieste. I am passionate about both low-level and high-level software development, operating system architecture, and data analysis.</p>
-                    <p>I write code in C (managing memory and parallelization), Java, Python (for data analysis using pandas and optimization with NumPy), R (also for data analysis), MATLAB (for solving non-linear functions via numerical methods), and SQL (for database queries). My primary development environment is Linux on GNU/Linux operating systems such as Arch Linux and Ubuntu (Debian). I have customized my Arch Linux setup to create a minimal environment using tools like Hyprland and i3, alongside Yazi, Kitty, Starship, and other software.</p>
-                    <p>Beyond software development, I also dedicate my time to other interests such as sports, cinema, and art.</p>
+                    <p class="no-indent"><strong>Data Scientist | Software Developer </strong></p>
+                    <p>I am Filippo Morello, a Data Science student (Foundations of Artificial Intelligence and Machine Learning) at the University of Trieste. My passion lies in software development, both low-level and high-level, operating systems architecture, and data analysis.</p>
+                    <p>I write C code handling memory management and parallelization; Java; Python for data analysis using Pandas and optimizations with NumPy; R for statistical computing; MATLAB for solving non-linear functions using numerical methods; and SQL for database querying. My primary development environment is Linux (Linux kernel) on GNU/Linux operating systems such as Arch Linux and Ubuntu (Debian). In the former, I have customized my setup using tools like Hyprland or i3, alongside Yazi, Kitty, Starship, and other software for a minimalist environment.</p>
+                    <p>Beyond software development, I also dedicate my time to other interests such as sports, cinema, literature, and art. I am particularly drawn to sci-fi and thrillers that explore philosophical themes. As an avid chess player, I study theory and tactics, focusing on openings like the Queen's Gambit, Sicilian, and King's Indian. To stay active, I engage in swimming, running, and long-distance trekking, while my artistic side finds expression through human figure portraits drawn with pencils and ink.</p>
                     
                     <p class="contact" id="contact">
                         <a href="mailto:filippo.morello@proton.me">Email</a>
@@ -32,214 +36,112 @@
                         <a href="https://github.com/Il-Moro" target="_blank">GitHub</a>
                     </p>
                 </div>
-
-                <div class="fonts" id="index-list">
-                    <header class="section-header">
-                        <h1>Index</h1>
-                    </header>
-                    <div class="item">
-                        <a href="#academic">
-                            <p class="item-details">
-                                <span class="title">ACADEMIC RECORD</span>
-                                <span class="collaborator">Education</span>
-                            </p>
-                        </a>
-                    </div>
-                    
-                    <div class="item">
-                        <a href="#projects">
-                            <p class="item-details">
-                                <span class="title">PROJECTS</span>
-                                <span class="collaborator">Portfolio</span>
-                            </p>
-                        </a>
-                        
-                        <!-- Indented projects -->
-                        <div class="sub-projects" style="padding-left: 1.5em; margin-top: 0.5em;">
-                            <div class="item" style="border-top: none; padding: 0.4rem 0;">
-                                <a href="#rubiks"><p class="item-details"><span class="title" style="text-transform: none; font-size: 0.9em;">Rubik's Cube</span></p></a>
-                            </div>
-                            <div class="item" style="border-top: none; padding: 0.4rem 0;">
-                                <a href="#tensorforth"><p class="item-details"><span class="title" style="text-transform: none; font-size: 0.9em;">Tensorforth</span></p></a>
-                            </div>
-                            <div class="item" style="border-top: none; padding: 0.4rem 0;">
-                                <a href="#chess"><p class="item-details"><span class="title" style="text-transform: none; font-size: 0.9em;">Java Chess Engine</span></p></a>
-                            </div>
-                            <div class="item" style="border-top: none; padding: 0.4rem 0;">
-                                <a href="#dots"><p class="item-details"><span class="title" style="text-transform: none; font-size: 0.9em;">Arch & Hyprland Dots</span></p></a>
-                            </div>
-                            <div class="item" style="border-top: none; padding: 0.4rem 0;">
-                                <a href="#tubeplayer"><p class="item-details"><span class="title" style="text-transform: none; font-size: 0.9em;">Kotlin TubePlayer</span></p></a>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="item">
-                        <a href="#future">
-                            <p class="item-details">
-                                <span class="title">FUTURE PROJECTS</span>
-                                <span class="collaborator">Roadmap</span>
-                            </p>
-                        </a>
-                    </div>
-
-                    <div class="item">
-                        <a href="#interests">
-                            <p class="item-details">
-                                <span class="title">INTERESTS & PASSIONS</span>
-                                <span class="collaborator">Beyond Code</span>
-                            </p>
-                        </a>
-                    </div>
-                </div>
             </div>
-            
+
             <!-- Right Pane (Recto) -->
             <div class="recto">
                 
-                <!-- Giant Typographic Index -->
-                <div id="giant-index" class="synopsis" style="padding-top: 2em; padding-bottom: 1em; min-height: auto;">
+                <div class="giant-index-block" style="margin-bottom: 2em; width: 100%; margin-top: 4em;">
+                    <div class="giant-word-container marquee-fade-container">
+                        <h1 class="giant-word marquee-content" style="margin: 0; padding: 0; font-size: 2.5vw; color: #fff;">
+                            My Path &nbsp; &bull; &nbsp; My Path &nbsp; &bull; &nbsp; My Path &nbsp; &bull; &nbsp; My Path &nbsp; &bull; &nbsp; My Path &nbsp; &bull; &nbsp; My Path &nbsp; &bull; &nbsp; My Path &nbsp; &bull; &nbsp; 
+                        </h1>
+                    </div>
+                </div>
+
+                <div class="timeline-container">
+                    <div class="timeline-line"></div>
+                    <div class="timeline-progress" id="timeline-progress"></div>
                     
-                    <div class="giant-index-block">
-                        <div class="giant-word-container">
-                            <a href="#academic" class="giant-word marquee-content">
-                                Academic Record &nbsp; • &nbsp; Academic Record &nbsp; • &nbsp; Academic Record &nbsp; • &nbsp; Academic Record &nbsp; • &nbsp; Academic Record &nbsp; • &nbsp; Academic Record &nbsp; • &nbsp; 
-                            </a>
+                    <div class="timeline-node">
+                        <div class="timeline-left">
+                            <h2 class="timeline-title">Scientific High School<br>Michelangelo Grigoletti</h2>
+                            <p class="timeline-date">Since 2018</p>
+                        </div>
+                        <div class="timeline-dot"></div>
+                        <div class="timeline-right">
+                            <p class="timeline-description"><strong>2018:</strong> <span style="color: #fff">Experiences:</span> Theater, Swimming Championship</p>
+                            <p class="timeline-description"><strong>2019:</strong> C <br><span style="color: #fff">Experiences:</span> Theater</p>
+                            <p class="timeline-description"><strong>2020:</strong> C++, Python</p>
+                            <p class="timeline-description"><strong>2021:</strong> HTML, CSS, PHP (little)</p>
+                            <p class="timeline-description"><strong>2022:</strong> Networks, Java <br><span style="color: #fff">Experiences:</span> Lifeguard</p>
+                            <p class="timeline-description" style="margin-top: 1em;"><strong>Other:</strong> Function Analysis, Physics</p>
                         </div>
                     </div>
 
-                    <div class="giant-index-block">
-                        <div class="giant-word-container">
-                            <a href="#projects" class="giant-word marquee-content">
-                                Projects Details &nbsp; • &nbsp; Projects Details &nbsp; • &nbsp; Projects Details &nbsp; • &nbsp; Projects Details &nbsp; • &nbsp; Projects Details &nbsp; • &nbsp; Projects Details &nbsp; • &nbsp; 
-                            </a>
+                    <div class="timeline-node">
+                        <div class="timeline-left">
+                            <h2 class="timeline-title">University of Trieste</h2>
+                            <h3 class="timeline-subtitle">Bachelor in Artificial Intelligence and Data Analytics</h3>
+                            <p class="timeline-date">Since 2023</p>
+                        </div>
+                        <div class="timeline-dot"></div>
+                        <div class="timeline-right">
+                            <p class="timeline-description"><strong>2023:</strong> <span style="color: #fff">Experiences:</span> Lifeguard</p>
+                            <p class="timeline-description"><strong>2024:</strong> Introduction to Programming and Laboratory, Computer Architectures and Operating Systems, Linear Algebra and Elements of Geometry, Mathematical Analysis I and II, Introduction to Physics, Probability Theory <br><span style="color: #fff">Skills:</span> C, Python, Linux, Bash <br><span style="color: #fff">Projects:</span> <a href="html/projects.html#rubiks" style="color: rgb(150, 150, 150); text-decoration: underline;">Rubik's Cube</a></p>
+                            <p class="timeline-description"><strong>2025:</strong> Algorithms and Data Structures, Databases, Optimization Algorithms, Statistical Inference, Mathematical Methods and Models for Artificial Intelligence, Ethical, Social and Legal Aspects of AI, English <br><span style="color: #fff">Skills:</span> R, MATLAB, PySide6, OOP, SQL, DB Queries</p>
+                            <p class="timeline-description"><strong>2026:</strong> Introduction to Artificial Intelligence, Data Analytics, Machine Learning (RL, Supervised & Unsupervised), Neural Networks, Regression Models, Numerical Analysis, ODE Analysis for Models, Computability Complexity and Logic, Computer Networks and Cybersecurity, Software Development Methods <br><span style="color: #fff">Skills:</span> Python Data Stack (Scikit-learn, NumPy, Pandas), Tooling (Gradle, Git, GitHub Actions, CI/CD) <br><span style="color: #fff">Projects:</span> <a href="html/projects.html#tensorforth" style="color: rgb(150, 150, 150); text-decoration: underline;">TensorForth</a>, <a href="html/projects.html#chess" style="color: rgb(150, 150, 150); text-decoration: underline;">Java Chess Engine</a>, <a href="html/projects.html#dots" style="color: rgb(150, 150, 150); text-decoration: underline;">Arch & Hyprland Dots</a></p>
                         </div>
                     </div>
 
-                    <div class="giant-index-block">
-                        <div class="giant-word-container">
-                            <a href="#rubiks" class="giant-word marquee-content">
-                                Rubik's Cube &nbsp; • &nbsp; Rubik's Cube &nbsp; • &nbsp; Rubik's Cube &nbsp; • &nbsp; Rubik's Cube &nbsp; • &nbsp; Rubik's Cube &nbsp; • &nbsp; Rubik's Cube &nbsp; • &nbsp; Rubik's Cube &nbsp; • &nbsp; 
-                            </a>
+                    <div class="timeline-node">
+                        <div class="timeline-left">
+                            <h3 class="timeline-subtitle">Master's Degree in Data Science: Foundations of Artificial Intelligence and Machine Learning</h3>
+                            <p class="timeline-date">Since 2026</p>
+                        </div>
+                        <div class="timeline-dot"></div>
+                        <div class="timeline-right">
+                            <p class="timeline-description">[following the lectures]</p>
                         </div>
                     </div>
-
-                    <div class="giant-index-block">
-                        <div class="giant-word-container">
-                            <a href="#tensorforth" class="giant-word marquee-content">
-                                Tensorforth &nbsp; • &nbsp; Tensorforth &nbsp; • &nbsp; Tensorforth &nbsp; • &nbsp; Tensorforth &nbsp; • &nbsp; Tensorforth &nbsp; • &nbsp; Tensorforth &nbsp; • &nbsp; Tensorforth &nbsp; • &nbsp; 
-                            </a>
-                        </div>
-                    </div>
-
-                    <div class="giant-index-block">
-                        <div class="giant-word-container">
-                            <a href="#chess" class="giant-word marquee-content">
-                                Java Chess Engine &nbsp; • &nbsp; Java Chess Engine &nbsp; • &nbsp; Java Chess Engine &nbsp; • &nbsp; Java Chess Engine &nbsp; • &nbsp; Java Chess Engine &nbsp; • &nbsp; 
-                            </a>
-                        </div>
-                    </div>
-
-                    <div class="giant-index-block">
-                        <div class="giant-word-container">
-                            <a href="#dots" class="giant-word marquee-content">
-                                Hyprland Dots &nbsp; • &nbsp; Hyprland Dots &nbsp; • &nbsp; Hyprland Dots &nbsp; • &nbsp; Hyprland Dots &nbsp; • &nbsp; Hyprland Dots &nbsp; • &nbsp; Hyprland Dots &nbsp; • &nbsp; 
-                            </a>
-                        </div>
-                    </div>
-
-                    <div class="giant-index-block">
-                        <div class="giant-word-container">
-                            <a href="#tubeplayer" class="giant-word marquee-content">
-                                Kotlin Tube Player &nbsp; • &nbsp; Kotlin Tube Player &nbsp; • &nbsp; Kotlin Tube Player &nbsp; • &nbsp; Kotlin Tube Player &nbsp; • &nbsp; Kotlin Tube Player &nbsp; • &nbsp; 
-                            </a>
-                        </div>
-                    </div>
-
-                    <div class="giant-index-block">
-                        <div class="giant-word-container">
-                            <a href="#future" class="giant-word marquee-content">
-                                Future Projects &nbsp; • &nbsp; Future Projects &nbsp; • &nbsp; Future Projects &nbsp; • &nbsp; Future Projects &nbsp; • &nbsp; Future Projects &nbsp; • &nbsp; 
-                            </a>
-                        </div>
-                    </div>
-
-                    <div class="giant-index-block">
-                        <div class="giant-word-container">
-                            <a href="#interests" class="giant-word marquee-content">
-                                Interests & Passions &nbsp; • &nbsp; Interests & Passions &nbsp; • &nbsp; Interests & Passions &nbsp; • &nbsp; Interests & Passions &nbsp; • &nbsp; Interests & Passions &nbsp; • &nbsp; 
-                            </a>
-                        </div>
-                    </div>
-
-                </div>
-                
-                <div id="academic" class="synopsis" style="padding-top: 4em;">
-                    <h1 class="first-recto">Academic Record</h1>
-                    <p class="description" style="font-size: 1.2rem;">Overview of the main exams of the Bachelor's degree program:</p>
-                    <p class="description" style="margin-top: 1.5em; font-size: 1.2rem;">
-                        <strong>Computer Science and Software Development:</strong><br>
-                        Introduzione alla Programmazione, Computabilità Complessità e Logica, Software Development Methods, Basi di Dati, Algoritmi e Strutture Dati, Architetture degli Elaboratori e OS, Reti di Calcolatori e Cybersecurity.
-                    </p>
-                    <p class="description" style="margin-top: 1.5em; font-size: 1.2rem;">
-                        <strong>Artificial Intelligence and Data Analysis:</strong><br>
-                        Introduzione all'AI, Metodi e Modelli Matematici per l'AI, Data Analytics, Aspetti Etici, Sociali e Legali dell'Intelligenza Artificiale, Machine Learning.
-                    </p>
-                    <p class="description" style="margin-top: 1.5em; font-size: 1.2rem;">
-                        <strong>Mathematics, Statistics and Physics:</strong><br>
-                        Algebra Lineare ed Elementi di Geometria, Analisi Matematica I e II, Inferenza Statistica, Algoritmi di Ottimizzazione, Calcolo delle Probabilità, Analisi Numerica, Introduzione alla Fisica, Sistemi Complessi, Teoria dell'informazione.
-                    </p>
                 </div>
 
-                <div id="projects" class="synopsis" style="padding-top: 4em; padding-bottom: 2em; min-height: auto;">
-                    <h1 class="first-recto" style="font-size: 3rem;">Projects Details</h1>
-                    
-                    <div class="projects-carousel" style="display: flex; overflow-x: auto; scroll-snap-type: x mandatory; gap: 1.5em; padding-top: 2em; padding-bottom: 1em; scrollbar-width: none;">
-                        <img src="images/projects/a1.png" alt="Project screenshot 1" style="scroll-snap-align: center; height: 350px; border-radius: 12px; box-shadow: 0 8px 24px rgba(0,0,0,0.15); object-fit: cover; flex-shrink: 0; cursor: pointer; transition: transform 0.3s ease;" onmouseover="this.style.transform='scale(1.02)'" onmouseout="this.style.transform='scale(1)'">
-                        <img src="images/projects/a2.png" alt="Project screenshot 2" style="scroll-snap-align: center; height: 350px; border-radius: 12px; box-shadow: 0 8px 24px rgba(0,0,0,0.15); object-fit: cover; flex-shrink: 0; cursor: pointer; transition: transform 0.3s ease;" onmouseover="this.style.transform='scale(1.02)'" onmouseout="this.style.transform='scale(1)'">
-                    </div>
-                </div>
-
-                <div id="rubiks" class="synopsis" style="padding-top: 0;">
-                    <h1 class="first-recto">Rubik's Cube</h1>
-                    <p class="description" style="margin-top: 1em;">Use and integration of the Z3 theorem prover for logic modeling, analysis, and resolution of complex constraint satisfaction problems (CSP).<br><br> <a href="https://github.com/Il-Moro/Rubik-s_Cube" target="_blank">View Repository →</a></p>
-                </div>
-                
-                <div id="tensorforth" class="synopsis" style="padding-top: 0;">
-                    <h1 class="first-recto">TensorForth</h1>
-                    <p class="description" style="margin-top: 1em;">Experimentation and development of TensorForth in C, replicating the behavior of the Forth language. Use of parallelization with OpenMP and vectorization using vector registers with C Intrinsics.<br><br> <a href="https://github.com/Il-Moro/PAPProjects" target="_blank">View Repository →</a></p>
-                </div>
-
-                <div id="chess" class="synopsis" style="padding-top: 0;">
-                    <h1 class="first-recto">Java Chess Engine</h1>
-                    <p class="description" style="margin-top: 1em;">Design and development of a chess engine with a Swing graphical interface. Implementation of the artificial intelligence decision-making logic using the Minimax algorithm with Alpha-Beta pruning, plus a solid structure of automated test suites via JUnit 5. Use of Git versioning, CI, and GitHub Actions.<br><br> <a href="https://github.com/Il-Moro/Chess-engine" target="_blank">View Repository →</a></p>
-                </div>
-
-                <div id="dots" class="synopsis" style="padding-top: 0;">
-                    <h1 class="first-recto">Arch & Hyprland Dots</h1>
-                    <p class="description" style="margin-top: 1em;">Customization of the development environment on Arch Linux, integrating a dedicated repository for dotfiles, Zsh scripts, and Makefiles to automate the installation and configuration of a new environment based on tiling window managers (Hyprland, i3) and terminal tools (Waybar, Yazi, Kitty, Neovim).<br><br> <a href="https://github.com/Il-Moro/hyprland-arch" target="_blank">View Repository →</a></p>
-                </div>
-
-                <div id="tubeplayer" class="synopsis" style="padding-top: 0;">
-                    <h1 class="first-recto">Kotlin TubePlayer</h1>
-                    <p class="description" style="margin-top: 1em;">Mobile application (Vibe Coded) for background media streaming. Built with Jetpack Compose for a modern and fluid interface, utilizing Media3 ExoPlayer and NewPipeExtractor for managing and playing playlists and audio/video content.<br><br> <a href="https://github.com/Il-Moro/tubePlayer" target="_blank">View Repository →</a></p>
-                </div>
-                
-                <div id="future" class="synopsis" style="padding-top: 0;">
-                    <h1 class="first-recto">Future Projects</h1>
-                    <p class="description" style="margin-top: 1em;"><strong>Upcoming Roadmap:</strong> I am focusing on the development of new architectures for custom neural networks and delving into the Rust ecosystem to create a minimal Wayland-based window manager. Additionally, I am designing a 3D rendering engine written in C to explore the low-level graphics pipeline.</p>
-                </div>
-
-                <div id="interests" class="synopsis">
-                    <h1 class="first-recto">Interests & Passions</h1>
-                    <p class="description" style="margin-top: 1em;"><strong>Cinema and Literature:</strong> I prefer science fiction and thriller works focused on philosophical themes and existential questions.</p>
-                    <p class="description" style="margin-top: 1.5em;"><strong>Chess:</strong> A player since childhood, I study theory, tactics, and openings such as the Queen's Gambit, Sicilian Defense, King's Indian Defense, and Caro-Kann.</p>
-                    <p class="description" style="margin-top: 1.5em;"><strong>Sports and Outdoors:</strong> I maintain strict physical discipline through swimming, running, and long-distance trekking.</p>
-                    <p class="description" style="margin-top: 1.5em;"><strong>Art and Drawing:</strong> I create portraits and studies of the human figure using pencils and ink pens.</p>
-                </div>
             </div>
 
         </div>
     </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const recto = document.querySelector('.recto');
+            const progress = document.getElementById('timeline-progress');
+            const nodes = document.querySelectorAll('.timeline-node');
+            
+            const handleScroll = () => {
+                const isMobile = window.innerWidth <= 768;
+                const scrollContainer = isMobile ? window : recto;
+                
+                const scrollTop = isMobile ? window.scrollY : recto.scrollTop;
+                const containerHeight = isMobile ? window.innerHeight : recto.clientHeight;
+                const scrollHeight = isMobile ? document.body.scrollHeight : recto.scrollHeight;
+                
+                // Calculate percentage
+                let percentage = (scrollTop / (scrollHeight - containerHeight)) * 100;
+                // Add a little extra so it starts filling right away
+                percentage = Math.min(percentage + 15, 100);
+                
+                progress.style.height = percentage + '%';
+
+                // Activate nodes based on scroll
+                nodes.forEach(node => {
+                    const nodeTop = isMobile ? node.getBoundingClientRect().top : node.getBoundingClientRect().top - recto.getBoundingClientRect().top;
+                    if (nodeTop < containerHeight * 0.75) {
+                        node.classList.add('active');
+                    } else {
+                        node.classList.remove('active');
+                    }
+                });
+            };
+
+            const isMobile = window.innerWidth <= 768;
+            if (isMobile) {
+                window.addEventListener('scroll', handleScroll);
+            } else {
+                recto.addEventListener('scroll', handleScroll);
+            }
+            // Trigger once on load
+            setTimeout(handleScroll, 100);
+        });
+    </script>
 </body>
 </html>
